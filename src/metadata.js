@@ -25,9 +25,11 @@ function Metadata (payloadType, cipher) {
   var metaDataHDNode = masterHDNode.deriveHardened(purpose);
 
   // Payload types:
-  // 0: reserved
+  // 0: reserved (guid)
   // 1: reserved
   // 2: whats-new
+  // 3: buy-sell
+  // 4: contacts list (messaging)
 
   var payloadTypeNode = metaDataHDNode.deriveHardened(payloadType);
 

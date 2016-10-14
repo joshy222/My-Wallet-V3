@@ -4,6 +4,7 @@ require('es6-promise').polyfill();
 require('isomorphic-fetch');
 
 var Buffer = require('buffer').Buffer;
+var BigInteger = require('bigi');
 
 // This fixes a bug with Safari < 8 and the Browserify Buffer shim used in Crypto-browserify/randombytes
 // See: https://github.com/feross/buffer/issues/63
@@ -22,6 +23,7 @@ try {
 
 module.exports = {
   Buffer: Buffer,
+  BigInteger: BigInteger,
   MyWallet: require('./src/wallet'),
   WalletStore: require('./src/wallet-store'),
   WalletCrypto: require('./src/wallet-crypto'),
@@ -40,9 +42,12 @@ module.exports = {
   Metadata: require('./src/metadata'),
   Bitcoin: require('bitcoinjs-lib'),
   External: require('./src/external'),
+  MDID: require('./src/mdid'),
   BuySell: require('./src/buy-sell'),
+  Contacts: require('./src/contacts'),
   BigInteger: require('bigi/lib'),
   BIP39: require('bip39'),
   Networks: require('bitcoinjs-lib/src/networks'),
+  Messenger: require('./src/messenger')
   ECDSA: require('bitcoinjs-lib/src/ecdsa')
 };
