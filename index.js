@@ -48,6 +48,6 @@ module.exports = {
   BigInteger: require('bigi/lib'),
   BIP39: require('bip39'),
   Networks: require('bitcoinjs-lib/src/networks'),
-  Messenger: require('./src/messenger')
+  Messenger: require('./src/messenger'),
   ECDSA: require('bitcoinjs-lib/src/ecdsa')
 };
